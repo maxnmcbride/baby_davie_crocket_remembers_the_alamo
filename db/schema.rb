@@ -10,10 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_01_194432) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_02_143803) do
   create_table "parks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "publics", force: :cascade do |t|
+    t.text "comment"
+    t.decimal "rating"
+    t.integer "user_id", null: false
+    t.integer "park_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["park_id"], name: "index_publics_on_park_id"
+    t.index ["user_id"], name: "index_publics_on_user_id"
+  end
+
+  create_table "user_parks", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "park_id", null: false
+    t.boolean "favorite"
+    t.boolean "visited"
+    t.boolean "wishlist"
+    t.text "personal_note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["park_id"], name: "index_user_parks_on_park_id"
+    t.index ["user_id"], name: "index_user_parks_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "publics", "parks"
+  add_foreign_key "publics", "users"
+  add_foreign_key "user_parks", "parks"
+  add_foreign_key "user_parks", "users"
 end
