@@ -1,18 +1,20 @@
 
 function SignUp () {
     return (
-        <div>
-            <form>
-                <input 
-                    type='text'
-                    name='name'
-                    placeholder='Name'
-                />
-                <input 
-                    type='text'
-                    name='lastName'
-                    placeholder='Last Name'
-                />
+        <div >
+            <form className="signUpFormContainer">
+                <div className="nameInputs">
+                    <input 
+                        type='text'
+                        name='name'
+                        placeholder='Name'
+                    />
+                    <input 
+                        type='text'
+                        name='lastName'
+                        placeholder='Last Name'
+                    />
+                </div>
                 <input 
                     type='text'
                     name='username'

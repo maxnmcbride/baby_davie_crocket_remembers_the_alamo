@@ -51,3 +51,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* -------------------- SIGN UP FORM ------------------- */
+.signUpFormContainer {
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signUpFormContainer input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.signUpFormContainer input[type=text]:focus {
+  background-color: rgb(168, 208, 138);
+  color: white;
+}
