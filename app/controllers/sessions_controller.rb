@@ -8,6 +8,12 @@ class SessionsController < ApplicationController
 
     # store the authenticated user’s id in the session
     render json: user
-    
+
     end
+
+    # logout custom route
+    def destroy
+        session.delete :user_id
+        head :no_content
+      end
   end
