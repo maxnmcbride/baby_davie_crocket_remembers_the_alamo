@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   # resources :parks
 
   get '/parks', to: 'parks#get_parks'
+
+  # Login custom route - KL
+  post "/login", to: "sessions#create"
   
 end
