@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import SignUp from "./components/SignUp"
 
 function App() {
 
@@ -16,7 +17,7 @@ console.log(data)
   return (
     <div className="App">
       <h1>Hi, I'm Davie Crockett and welcome to the Alamo!</h1>
-
+      <SignUp />
     </div>
   );
 }
