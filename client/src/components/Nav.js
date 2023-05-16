@@ -1,5 +1,5 @@
-import SignUp from "./SignUp";
 import { Outlet, Link } from "react-router-dom";
+
 
 function Nav() {
     return (
@@ -8,7 +8,8 @@ function Nav() {
             <Link to="/">Landing</Link>
             <br/>
             <Link to="/signup">Sign Up</Link>
-            
+            <br/>
+            <Link to="/about">About</Link>
             <Outlet />
         </div> 
     )

@@ -7,6 +7,13 @@ import SignUp from "./components/SignUp"
 import Nav from "./components/Nav";
 import NoPage from "./components/NoPage";
 import LandingPage from "./components/LandingPage";
+import About from "./components/About";
+import SurpriseMe from "./components/SurpriseMe";
+import Login from "./components/Login";
+import TopRated from "./components/TopRated";
+import StatePage from "./components/StatePage";
+import ParkPage from "./components/ParkPage";
+import Dashboard from "./components/Dashboard";
 
 function App() {
 
@@ -26,8 +33,15 @@ console.log(data)
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />}>
-          <Route path="signup" element={<SignUp />} />
           <Route index element={<LandingPage />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="about" element={<About />} />
+          <Route path="login" element={<Login />} />
+          <Route path="state" element={<StatePage />} />
+          <Route path="park" element={<ParkPage />} />
+          <Route path="top-rated" element={<TopRated />} />
+          <Route path="surprise" element={<SurpriseMe />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
