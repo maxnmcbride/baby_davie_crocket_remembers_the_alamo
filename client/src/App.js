@@ -39,7 +39,7 @@ console.log(data)
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
           <Route path="state" element={<StatePage />} />
-          <Route path="park" element={<ParkPage />} />
+          <Route path="park" element={<ParkPage parkData={data} />}  />
           <Route path="top-rated" element={<TopRated />} />
           <Route path="surprise" element={<SurpriseMe />} />
           <Route path="*" element={<NoPage />} />
