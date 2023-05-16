@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp"
 import Nav from "./components/Nav";
 import NoPage from "./components/NoPage";
+import LandingPage from "./components/LandingPage";
 
 function App() {
 
@@ -25,12 +26,13 @@ console.log(data)
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />}>
-          <Route index element={<SignUp />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route index element={<LandingPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
-    
+
     // <div className="App">
     
     //   <h1>Hi, I'm Davie Crockett and welcome to the Alamo!</h1>
