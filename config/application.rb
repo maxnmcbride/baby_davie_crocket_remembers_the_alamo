@@ -23,5 +23,12 @@ module NationalParks
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Adding to use cookies - KL
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+
+    # Adds security. Only accepts request from applications running on the same domain, same site cookies to protect app - KL
+    config.action_dispatch.cookies_same_site_protection = :strict
   end
 end

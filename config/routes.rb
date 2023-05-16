@@ -6,5 +6,10 @@ Rails.application.routes.draw do
   # resources :parks
 
   get '/parks', to: 'parks#get_parks'
+
+  # Auth custom routes - KL
+  post "/login", to: "sessions#create"
+  get "/me", to: "users#show"
+  delete "/logout", to: "sessions#destroy"
   
 end
