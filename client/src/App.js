@@ -18,8 +18,10 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
 
-  console.log(process.env.REACT_APP_MAP_KEY)
-
+  console.log(process.env.REACT_APP_MAPBOX_TOKEN)
+  
+  const MAPBOX_TOKEN = 'pk.eyJ1IjoibWFwc21jc2NyaWJlIiwiYSI6ImNsaG52ZGplejFwNGEzcHRsZ2kxYW9ieG8ifQ.iu7MiRZSUm2SsoCEA4YFSg';
+  
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -49,11 +51,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      {/* <div>
-      <ReactMapGL {...viewport} mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
-        markers here
-      </ReactMapGL>
-      </div> */}
       <Map
         initialViewState={{
           latitude: 44.967243,
