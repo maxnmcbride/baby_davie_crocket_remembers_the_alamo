@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mapbox-gl": "^2.14.1",
+    "react-map-gl": "^7.0.23"
+  }
+}
