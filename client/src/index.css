@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } 
-/* -------------------- NAV PAGE ------------------- */
+/* -------------------- NAV ------------------- */
 
 
 
@@ -65,7 +65,14 @@ code {
 
 /* -------------------- ABOUT PAGE ------------------- */
 
+#about-page-banner {
+  width: 100%;
+  max-height: 200px;
+}
 
+.tech-stack-icon {
+  max-height: 100px;
+}
 
 
 
