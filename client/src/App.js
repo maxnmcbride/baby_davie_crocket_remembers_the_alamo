@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// import Map from 'react-map-gl';
+import Map, { Marker } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 import SignUp from "./components/SignUp"
 import Nav from "./components/Nav";
@@ -17,51 +18,55 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
 
+  console.log(process.env.REACT_APP_MAP_KEY)
+
   const [data, setData] = useState([])
 
-useEffect(() => {
-  // FIGURE OUT HOW TO OVERRIDE LIMIT ON FETCH TO HAVE ACCESS TO ALL PARKS
-  fetch('http://localhost:3000/parks')
-  .then(res => res.json())
-  .then(data => setData(data.data))
-},[])
+  useEffect(() => {
+    // FIGURE OUT HOW TO OVERRIDE LIMIT ON FETCH TO HAVE ACCESS TO ALL PARKS
+    fetch('http://localhost:3000/parks')
+      .then(res => res.json())
+      .then(data => setData(data.data))
+  }, [])
 
-
-console.log(data)
+  console.log(data)
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Nav />}>
-          <Route index element={<LandingPage />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="signup" element={<SignUp />} />
-          <Route path="about" element={<About />} />
-          <Route path="login" element={<Login />} />
-          <Route path="state" element={<StatePage />} />
-          <Route path="park" element={<ParkPage />} />
-          <Route path="top-rated" element={<TopRated />} />
-          <Route path="surprise" element={<SurpriseMe />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-
-    // <div className="App">
-    
-    //   <h1>Hi, I'm Davie Crockett and welcome to the Alamo!</h1>
-    //   {/* <Map
-    //     mapLib={import('mapbox-gl')}
-    //     initialViewState={{
-    //       longitude: -100,
-    //       latitude: 40,
-    //       zoom: 3.5
-    //     }}
-    //     style={{ width: 600, height: 400 }}
-    //     mapStyle="mapbox://styles/mapbox/streets-v9"
-    //   />; */}
-    //   <SignUp />
-    // </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Nav />}>
+            <Route index element={<LandingPage />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="about" element={<About />} />
+            <Route path="login" element={<Login />} />
+            <Route path="state" element={<StatePage />} />
+            <Route path="park" element={<ParkPage />} />
+            <Route path="top-rated" element={<TopRated />} />
+            <Route path="surprise" element={<SurpriseMe />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <div>
+      <ReactMapGL {...viewport} mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
+        markers here
+      </ReactMapGL>
+      </div> */}
+      <Map
+        initialViewState={{
+          latitude: 44.967243,
+          longitude: -103.771556,
+          zoom: 2
+        }}
+        style={{ width: '100vw', height: '100vh' }}
+        mapStyle="mapbox://styles/mapbox/streets-v9"
+        mapboxAccessToken={MAPBOX_TOKEN}
+      >
+        <Marker longitude={-103.771556} latitude={44.967243} color="navy" />
+      </Map>
+    </>
   );
 
 }
