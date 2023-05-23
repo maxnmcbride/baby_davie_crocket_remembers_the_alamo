@@ -18,8 +18,6 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
 
-  console.log(process.env.REACT_APP_MAPBOX_TOKEN)
-
   const [data, setData] = useState([])
 
   useEffect(() => {
