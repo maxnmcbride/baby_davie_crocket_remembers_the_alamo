@@ -1,5 +1,6 @@
 import placeholder from '../media/placeholder.png';
 import TechStack from './About_Comp/TechStack';
+import Team from './About_Comp/Team';
 
 function About() {
 
@@ -35,24 +36,11 @@ function About() {
             <section>
                 <h1>Meet The Prowler Team!</h1>
                 <section>
-                    
-                    <div>
-                        <img src='' alt=''/>
-                        <h4>name</h4>
-                    </div>
-                    <div>
-                        <img src='' alt=''/>
-                        <h4>name</h4>
-                    </div>
-                    <div>
-                        <img src='' alt=''/>
-                        <h4>name</h4>
-                    </div>
-                    <div>
-                        <img src='' alt=''/>
-                        <h4>name</h4>
-                    </div>
-
+                    <Team name='' src='' alt='' />
+                    <Team name='' src='' alt='' />
+                    <Team name='' src='' alt='' />
+                    <Team name='' src='' alt='' />
+                    <Team name='' src='' alt='' />
                 </section>
             </section>
             <hr></hr>
