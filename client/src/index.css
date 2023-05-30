@@ -87,7 +87,14 @@ code {
 }
 
 #tech-stack-section {
-  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+}
+
+.tech-stack-divs {
 
 }
 
