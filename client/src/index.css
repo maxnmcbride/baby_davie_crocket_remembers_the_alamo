@@ -86,7 +86,11 @@ code {
   max-height: 200px;
 }
 
-#tech-stack-section {
+#tech-stack-parent-section {
+
+}
+
+#tech-stack-icon-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
