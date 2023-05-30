@@ -18,17 +18,39 @@ function About() {
             <section>
                 <h1>Tech Stack</h1>
                 <section id='tech-stack-section'>
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt='react icon'/>
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt='javascript icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg" alt='ruby icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg" alt='rails icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" alt='sqlite icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt='html5 icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt='css3 icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt='figma icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt='github logo' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt='npm icon' />
-                    <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg" alt='visual studio code icon' />        
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt='react icon'/>
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt='javascript icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg" alt='ruby icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg" alt='rails icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" alt='sqlite icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt='html5 icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt='css3 icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt='figma icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt='github logo' />
+                    </div>   
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt='npm icon' />
+                    </div>
+                    <div className='tech-stack-divs'>
+                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg" alt='visual studio code icon' />  
+                    </div>      
                 </section>
             </section>
             <section>
