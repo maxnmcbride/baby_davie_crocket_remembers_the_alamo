@@ -2,8 +2,7 @@ import placeholder from '../media/placeholder.png';
 import TechStack from './About_Comp/TechStack';
 import Team from './About_Comp/Team';
 
-function About() 
-
+function About() {
 
     return ( 
         <>
@@ -67,6 +66,5 @@ function About()
             </section>
         </>
      );
-}
-
+    }
 export default About;
