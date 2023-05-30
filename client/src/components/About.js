@@ -15,9 +15,9 @@ function About() {
                 <h1>What is Park Prowler?</h1>
                 <p>Whos-a-whats-it is a cool person and they do... Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.</p>
             </section>
-            <section>
+            <section id='tech-stack-parent-section'>
                 <h1>Tech Stack</h1>
-                <section id='tech-stack-section'>
+                <section id='tech-stack-icon-section'>
                     <div className='tech-stack-divs'>
                         <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt='react icon'/>
                     </div>
