@@ -24,8 +24,6 @@ function App() {
       .then(data => setData(data.data))
   }, [])
 
-  // console.log(data)
-
   return (
     <BrowserRouter>
       <Routes>

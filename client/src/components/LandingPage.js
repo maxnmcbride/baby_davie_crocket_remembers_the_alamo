@@ -3,6 +3,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 function LandingPage({ parkData }) {
 
+    console.log(parkData)
+    
     return (
         <>
             <h1>Landing Page</h1>
