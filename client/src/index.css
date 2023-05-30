@@ -57,6 +57,22 @@ code {
   align-items: center;
 }
 
+/* -------------------- LANDING PAGE ------------------- */
+/* .map-container {
+  position: relative;
+  width: 25%;
+  height: 25%; 
+}
+
+.map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; 
+  height: 80%; 
+} */
+
 /* -------------------- DASHBOARD PAGE ------------------- */
 
 
@@ -80,3 +96,4 @@ code {
 /* -------------------- SURPRISE ME PAGE ------------------- */
 
 /* -------------------- TOP RATED PAGE ------------------- */
+
