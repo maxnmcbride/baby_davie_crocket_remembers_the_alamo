@@ -3,8 +3,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 function LandingPage({ parkData }) {
 
-    console.log(parkData)
-    
+    console.log("landing page:", parkData)
+
     return (
         <>
             <h1>Landing Page</h1>
@@ -21,7 +21,7 @@ function LandingPage({ parkData }) {
                     mapStyle="mapbox://styles/mapbox/outdoors-v12"
                     mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                 >
-                    {parkData.map(park => (
+                    {parkData.map((park) => park.designation !== 'National Park' ? null : (
                         <Marker
                             key={park.id}
                             latitude={park.latitude}

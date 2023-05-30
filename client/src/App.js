@@ -18,7 +18,7 @@ function App() {
   const [data, setData] = useState([])
 
   useEffect(() => {
-    // FIGURE OUT HOW TO OVERRIDE LIMIT ON FETCH TO HAVE ACCESS TO ALL PARKS
+    // Query adjustment for limits is done on the back end
     fetch('http://localhost:3000/parks')
       .then(res => res.json())
       .then(data => setData(data.data))
