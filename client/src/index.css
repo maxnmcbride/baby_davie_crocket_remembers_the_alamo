@@ -86,6 +86,21 @@ code {
   max-height: 200px;
 }
 
+/* #about-pp-parent-section {
+
+} */
+
+#about-pp-header-div {
+  margin: auto;
+  text-align: center;
+}
+
+#about-paragraph-div {
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+}
+
 #tech-stack-parent-section {
 
 }
