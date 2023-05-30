@@ -24,13 +24,13 @@ function App() {
       .then(data => setData(data.data))
   }, [])
 
-  console.log(data)
+  // console.log(data)
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />}>
-          <Route index element={<LandingPage />} />
+          <Route index element={<LandingPage parkData={data}/>} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="about" element={<About />} />
