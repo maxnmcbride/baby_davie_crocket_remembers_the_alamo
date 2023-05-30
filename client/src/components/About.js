@@ -17,7 +17,7 @@ function About() {
             </section>
             <section>
                 <h1>Tech Stack</h1>
-                <section>
+                <section id='tech-stack-section'>
                     <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt='react icon'/>
                     <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt='javascript icon' />
                     <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg" alt='ruby icon' />

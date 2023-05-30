@@ -86,6 +86,11 @@ code {
   max-height: 200px;
 }
 
+#tech-stack-section {
+  /* display: flex; */
+
+}
+
 .tech-stack-icon {
   max-height: 100px;
 }
