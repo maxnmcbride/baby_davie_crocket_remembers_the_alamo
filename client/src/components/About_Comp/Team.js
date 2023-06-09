@@ -1,12 +1,19 @@
+import EachMember from "./EachMember";
 
+function Team({prowlerPeople}) {
 
-function Team({src, alt, name}) {
-    return ( 
-        <div>
-            <img src={src} alt={alt}/>
-            <h4>{name}</h4>
+    const peopleArray = prowlerPeople.map(each => {
+        return (  <EachMember key={each.id} {...each}/> )
+    });
+
+    return (
+        <div id='top-container-circle-photo'>
+            <div id='circle-photo-container-parent'>
+                {peopleArray}
+            </div>
         </div>
-     );
+    )
+   
 }
 
 export default Team;

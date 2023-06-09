@@ -120,6 +120,24 @@ code {
 .tech-stack-icon {
   max-height: 100px;
 }
+#top-container-circle-photo {
+  max-width: 1000px;
+  margin: auto ;
+}
+
+#circle-photo-container-parent {
+  display: flex;
+  place-content: center;
+  justify-content: space-around;
+}
+
+.circle-photo {
+  max-width: 150px;
+}
+
+.circle-photo-name {
+  text-align: center;
+}
 
 
 
