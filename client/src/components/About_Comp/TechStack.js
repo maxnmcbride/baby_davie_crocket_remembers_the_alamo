@@ -1,15 +1,16 @@
+import EachTech from "./EachTech";
 
 
+function TechStack({icons}) {
 
-function TechStack({src, alt}) {
+    const techArray = icons.map(each => {
+        return ( <EachTech key={each.alt} {...each} />)
+    }) 
+
     return ( 
-        <div id='tech-stack-section'>
-            <img 
-                className='tech-stack-icon' 
-                src={src} 
-                alt={alt}
-            />
-        </div>
+       <div>
+            {techArray}
+       </div> 
      );
 }
 

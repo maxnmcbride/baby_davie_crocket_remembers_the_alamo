@@ -15,7 +15,7 @@ import lindsay_circle from '../media/lindsay_circle.png';
 
 function About() {
 
-const prowlerPeople = [ {
+    const prowlerPeople = [ {
         id: 1,
         name: 'Leah Cardoz',
         img_circle: leah_circle,
@@ -73,6 +73,54 @@ const prowlerPeople = [ {
         }   
     ];
 
+    const iconArray = [ 
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
+            alt:'html5 icon'
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
+            alt:'css3 icon'
+        },
+        {
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
+            alt: 'react icon'
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+            alt:'javascript icon' 
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg",
+            alt:'ruby icon'
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg",
+            alt:'rails icon'
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg",
+            alt:'sqlite icon'
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+            alt:'figma icon' 
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
+            alt:'github logo'
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+            alt:'npm icon'
+        },
+        {
+            src:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg",
+            alt:'visual studio code icon'
+        }
+
+    ];
+
 
     return ( 
         <>
@@ -89,39 +137,9 @@ const prowlerPeople = [ {
             <section id='tech-stack-parent-section'>
                 <h1>Tech Stack</h1>
                 <section id='tech-stack-icon-section'>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt='react icon'/>
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt='javascript icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg" alt='ruby icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain-wordmark.svg" alt='rails icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" alt='sqlite icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt='html5 icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt='css3 icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt='figma icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt='github logo' />
-                    </div>   
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt='npm icon' />
-                    </div>
-                    <div className='tech-stack-divs'>
-                        <TechStack src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg" alt='visual studio code icon' />  
-                    </div>      
+                    <div id='tech-stack-divs'>
+                        <TechStack icons={iconArray}/>
+                    </div>  
                 </section>
             </section>
             <section>
