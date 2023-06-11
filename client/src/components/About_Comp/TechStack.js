@@ -8,7 +8,7 @@ function TechStack({icons}) {
     }) 
 
     return ( 
-       <div>
+       <div id='tech-stack-icon-div'>
             {techArray}
        </div> 
      );

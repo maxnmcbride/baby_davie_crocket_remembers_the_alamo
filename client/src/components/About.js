@@ -135,15 +135,13 @@ function About() {
                 </div>
             </section>
             <section id='tech-stack-parent-section'>
-                <h1>Tech Stack</h1>
-                <section id='tech-stack-icon-section'>
-                    <div id='tech-stack-divs'>
-                        <TechStack icons={iconArray}/>
-                    </div>  
+                <h1 id='tech-stack-title'>Tech Stack</h1>
+                <section>
+                    <TechStack icons={iconArray}/>
                 </section>
             </section>
             <section>
-                <h1>Meet The Prowler Team!</h1>
+                <h1 id='meet-prowlers-title'>Meet The Prowler Team!</h1>
                 <section>
                     <Team prowlerPeople={prowlerPeople}/>
                 </section>

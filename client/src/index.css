@@ -101,25 +101,35 @@ code {
   margin: auto;
 }
 
+
+/* Tech Stack Attributes */
 #tech-stack-parent-section {
 
 }
 
-#tech-stack-icon-section {
+#tech-stack-title {
+  text-align: center;
+}
+
+#tech-stack-icon-div {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  /* max-width: 1200px; */
-  /* margin: 0 auto; */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
 }
 
-#tech-stack-divs {
-
-}
 
 .tech-stack-icon {
   max-height: 100px;
 }
+
+/* Prowler Peeps Attributes */
+
+#meet-prowlers-title {
+  text-align: center;
+}
+
 #top-container-circle-photo {
   max-width: 1000px;
   margin: auto ;
