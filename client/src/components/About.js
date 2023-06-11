@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 import placeholder from '../media/placeholder.png';
 import TechStack from './About_Comp/TechStack';
 import Team from './About_Comp/Team';
+import MemberDetails from './About_Comp/MemberDetails';
 
 import aaron_full from '../media/aaron_full.jpg';
 import aaron_circle from '../media/aaron_circle.png';
@@ -121,6 +124,13 @@ function About() {
 
     ];
 
+    const [showAbout, setShowAbout] = useState(false)
+
+    const handleProwlerClick = () => {
+        setShowAbout(!showAbout);
+        // console.log('clicking');
+    };
+
 
     return ( 
         <>
@@ -143,12 +153,12 @@ function About() {
             <section>
                 <h1 id='meet-prowlers-title'>Meet The Prowler Team!</h1>
                 <section>
-                    <Team prowlerPeople={prowlerPeople}/>
+                    <Team prowlerPeople={prowlerPeople} clickFn={handleProwlerClick}/>
                 </section>
             </section>
             <hr></hr>
             <section>
-                {}
+                {showAbout ? <MemberDetails /> : null}
             </section>
         </>
      );

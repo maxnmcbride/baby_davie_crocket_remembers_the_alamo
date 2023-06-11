@@ -1,16 +1,14 @@
 import EachMember from "./EachMember";
 
-function Team({prowlerPeople}) {
+function Team({prowlerPeople, clickFn}) {
 
     const peopleArray = prowlerPeople.map(each => {
-        return (  <EachMember key={each.id} {...each}/> )
+        return (  <EachMember key={each.id} {...each} clickFn={clickFn}/> )
     });
 
     return (
-        <div id='top-container-circle-photo'>
-            <div id='circle-photo-container-parent'>
-                {peopleArray}
-            </div>
+        <div id='circle-photo-container-parent'>
+            {peopleArray}
         </div>
     )
    

@@ -1,9 +1,30 @@
-function EachMember({name, img_circle, alt }) {
+import { useState } from "react";
+import MemberDetails from "./MemberDetails";
+
+
+function EachMember({name, img_circle, img_full, alt_title, bio, linkedin, github, medium, other_url, clickFn}) {
+
+    const [showAbout, setShowAbout] = useState(false);
+
+  
     return ( 
-        <div>
-            <img className='circle-photo' src={img_circle} alt={alt}/>
-            <h4 className='circle-photo-name' >{name}</h4>
-        </div>
+        <>
+            <div onClick={clickFn}>
+                <img className='circle-photo' src={img_circle} alt={alt_title}/>
+                <h4 className='circle-photo-name'>{name}</h4>
+            </div>
+            {showAbout ? 
+                <MemberDetails
+                    name={name} 
+                    photo={img_full} 
+                    alt={alt_title} 
+                    bio={bio} 
+                    linkedin={linkedin}
+                    github={github}
+                    medium={medium}
+                    other_url={other_url}
+                /> : null}
+        </>
      );
 }
 

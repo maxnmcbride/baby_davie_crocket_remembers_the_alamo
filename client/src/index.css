@@ -104,7 +104,8 @@ code {
 
 /* Tech Stack Attributes */
 #tech-stack-parent-section {
-
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 #tech-stack-title {
@@ -131,11 +132,13 @@ code {
 }
 
 #top-container-circle-photo {
-  max-width: 1000px;
-  margin: auto ;
+  /* max-width: 1000px;
+  margin: auto ; */
 }
 
 #circle-photo-container-parent {
+  max-width: 1000px;
+  margin: auto ;
   display: flex;
   place-content: center;
   justify-content: space-around;
@@ -149,7 +152,21 @@ code {
   text-align: center;
 }
 
+hr {
+  max-width: 1000px;
+}
 
+#member-details-div {
+
+}
+
+#full-bio-photo {
+  max-width: 300px;
+}
+
+.website-link-icons {
+  max-width: 30px;
+}
 
 
 /* -------------------- SURPRISE ME PAGE ------------------- */
