@@ -13,6 +13,7 @@ function EachMember({name, img_circle, img_full, alt_title, bio, linkedin, githu
                 <img className='circle-photo' src={img_circle} alt={alt_title}/>
                 <h4 className='circle-photo-name'>{name}</h4>
             </div>
+            {/* THIS DOESN'T WORK FOR PASSING PROPS WHEN THE COMPENENT DISPLAYS IN THE ABOUT PARENT COMPONENT */}
             {showAbout ? 
                 <MemberDetails
                     name={name} 

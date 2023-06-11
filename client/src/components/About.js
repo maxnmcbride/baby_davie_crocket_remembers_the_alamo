@@ -158,6 +158,7 @@ function About() {
             </section>
             <hr></hr>
             <section>
+                {/* THIS ISN'T GOING TO WORK FOR THE MEMBER DETAILS TO SHOW UP WITH EACH PERSONS DETAILS -- FIGURE OUT NEW WAY AROUND THIS */}
                 {showAbout ? <MemberDetails /> : null}
             </section>
         </>
