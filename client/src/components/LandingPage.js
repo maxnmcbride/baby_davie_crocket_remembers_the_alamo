@@ -50,7 +50,9 @@ function LandingPage({ parkData }) {
                             closeOnClick={false}
                         >
                             <div>
-                                <img src={selectedLocation.images[0].url}/>
+                                <img src={selectedLocation.images[0].url}
+                                    width= '200px'
+                                    height= 'auto'/>
                                 <h3>{selectedLocation.fullName}</h3>
                                 <p>{selectedLocation.description}</p>
                             </div>
