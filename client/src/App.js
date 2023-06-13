@@ -17,6 +17,8 @@ function App() {
 
   const [data, setData] = useState([])
 
+  const [selectedState, setSelectedState] = useState(null)
+
   useEffect(() => {
     // Query adjustment for limits is done on the back end
     fetch('http://localhost:3000/parks')
@@ -33,7 +35,7 @@ function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
-          <Route path="state" element={<StatePage />} />
+          <Route path="state" element={<StatePage parkData={data} />} />
           <Route path="park" element={<ParkPage parkData={data} />}  />
           <Route path="top-rated" element={<TopRated />} />
           <Route path="surprise" element={<SurpriseMe />} />

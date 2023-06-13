@@ -8,6 +8,15 @@ function LandingPage({ parkData }) {
     return (
         <>
             <h1>Landing Page</h1>
+            <form> 
+                <label for="states">Choose State:</label>
+                <select id="states" name="states">
+                    <option value="AL">AL</option>
+                    <option value="AK">AK</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                </select>
+            </form>
             <div className="map-container">
                 <Map
                     id="map" 
