@@ -4,13 +4,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 function LandingPage({ parkData }) {
 
-    const [selectedLocation, setSelectedLocation] = useState();
+    const [selectedLocation, setSelectedLocation] = useState(null);
 
-    const handleMarkerClick = (park) => {
-        setSelectedLocation(park);
-    };
-
-    console.log("selected bs:", selectedLocation)
+    const handleMarkerClick = (park) => setSelectedLocation(park);
 
     return (
         <>
@@ -30,16 +26,12 @@ function LandingPage({ parkData }) {
                 >
                     {parkData.map((park) => park.designation !== 'National Park' ? null : (
                         <Marker
+                            onClick={() => handleMarkerClick(park)}
                             key={park.id}
                             latitude={park.latitude}
                             longitude={park.longitude}
+                            color='navy'
                         >
-                            <button
-                                className="marker-btn"
-                                onClick={() => handleMarkerClick(park)}
-                            >
-                                <img src="marker-icon.png" alt={park.name}/>
-                            </button>
                         </Marker>
                     ))}
                     {selectedLocation && (
@@ -50,7 +42,9 @@ function LandingPage({ parkData }) {
                             closeOnClick={false}
                         >
                             <div>
-                                <img src={selectedLocation.images[0].url}/>
+                                <img src={selectedLocation.images[0].url}
+                                    width= '200px'
+                                    height= 'auto'/>
                                 <h3>{selectedLocation.fullName}</h3>
                                 <p>{selectedLocation.description}</p>
                             </div>
