@@ -18,6 +18,7 @@ import lindsay_circle from '../media/lindsay_circle.png';
 
 function About() {
 
+
     const prowlerPeople = [ {
         id: 1,
         name: 'Leah Cardoz',
@@ -131,7 +132,6 @@ function About() {
         // console.log('clicking');
     };
 
-
     return ( 
         <>
             <h1>ABOUT THE PROJECT PAGE DUMMY</h1>
@@ -163,6 +163,5 @@ function About() {
             </section>
         </>
      );
-}
-
+    }
 export default About;
