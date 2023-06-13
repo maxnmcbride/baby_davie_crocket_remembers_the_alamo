@@ -1,16 +1,23 @@
-import Map, { Marker } from 'react-map-gl';
+import { useState } from 'react';
+import Map, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 function LandingPage({ parkData }) {
 
-    console.log("landing page:", parkData)
+    const [selectedLocation, setSelectedLocation] = useState();
+
+    const handleMarkerClick = (park) => {
+        setSelectedLocation(park);
+    };
+
+    console.log("selected bs:", selectedLocation)
 
     return (
         <>
             <h1>Landing Page</h1>
             <div className="map-container">
                 <Map
-                    id="map" 
+                    id="map"
                     className="map"
                     initialViewState={{
                         latitude: 44.967243,
@@ -26,9 +33,29 @@ function LandingPage({ parkData }) {
                             key={park.id}
                             latitude={park.latitude}
                             longitude={park.longitude}
-                            color='navy'
-                        />
+                        >
+                            <button
+                                className="marker-btn"
+                                onClick={() => handleMarkerClick(park)}
+                            >
+                                <img src="marker-icon.png" alt={park.name}/>
+                            </button>
+                        </Marker>
                     ))}
+                    {selectedLocation && (
+                        <Popup
+                            latitude={selectedLocation.latitude}
+                            longitude={selectedLocation.longitude}
+                            onClose={() => setSelectedLocation(null)}
+                            closeOnClick={false}
+                        >
+                            <div>
+                                <img src={selectedLocation.images[0].url}/>
+                                <h3>{selectedLocation.fullName}</h3>
+                                <p>{selectedLocation.description}</p>
+                            </div>
+                        </Popup>
+                    )}
                 </Map>
             </div>
         </>
