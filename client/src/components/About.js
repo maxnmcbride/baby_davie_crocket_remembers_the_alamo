@@ -4,9 +4,6 @@ import Team from './About_Comp/Team';
 
 function About() {
 
-
-
-
     return ( 
         <>
             <h1>ABOUT THE PROJECT PAGE DUMMY</h1>
@@ -69,6 +66,5 @@ function About() {
             </section>
         </>
      );
-}
-
+    }
 export default About;
