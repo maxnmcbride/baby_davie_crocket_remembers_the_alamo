@@ -1,25 +1,24 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Map, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 function LandingPage({ parkData }) {
 
+    // console.log(parkData)
+
     const [selectedLocation, setSelectedLocation] = useState(null);
 
     const handleMarkerClick = (park) => setSelectedLocation(park);
 
+    const handleParkPageClick = (park) => {
+        console.log('park page click')
+        
+    }
+
     return (
         <>
             <h1>Landing Page</h1>
-            <form> 
-                <label for="states">Choose State:</label>
-                <select id="states" name="states">
-                    <option value="AL">AL</option>
-                    <option value="AK">AK</option>
-                    <option value="AZ">AZ</option>
-                    <option value="AR">AR</option>
-                </select>
-            </form>
             <div className="map-container">
                 <Map
                     id="map"
@@ -50,12 +49,20 @@ function LandingPage({ parkData }) {
                             onClose={() => setSelectedLocation(null)}
                             closeOnClick={false}
                         >
-                            <div>
-                                <img src={selectedLocation.images[0].url}
+                            <div style={{textAlign: 'center'}}>
+                                <img 
+                                    src={selectedLocation.images[0].url}
                                     width= '200px'
-                                    height= 'auto'/>
+                                    height= 'auto'
+                                    alt={selectedLocation.fullName}
+                                />
                                 <h3>{selectedLocation.fullName}</h3>
-                                <p>{selectedLocation.description}</p>
+                                <p>{selectedLocation.description.slice(0,110)}...</p>
+                            </div>
+                            <div style={{textAlign: 'center'}}>
+                                <Link to="/park">{selectedLocation.fullName}'s Page</Link>
+                                <br />
+                                <Link to="/state">View All {selectedLocation.states} Parks</Link>
                             </div>
                         </Popup>
                     )}
