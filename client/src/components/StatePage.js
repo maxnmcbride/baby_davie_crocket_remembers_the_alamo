@@ -1,10 +1,12 @@
 
 
-function StatePage({parkData}) {
+function StatePage({selectedLocation}) {
+ 
+    console.log('selectedLocation on StatePage', selectedLocation)
 
-    console.log('parkData on StatePage', parkData)
+    // console.log('parkData on StatePage', parkData)
 
-    const filteredParks = parkData.filter(park => park.states ===  parkData.states)
+    // const filteredParks = parkData.filter(park => park.states ===  parkData.states)
 
     return ( 
         <>

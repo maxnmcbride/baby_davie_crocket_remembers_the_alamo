@@ -3,18 +3,24 @@ import { Link } from 'react-router-dom';
 import Map, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-function LandingPage({ parkData }) {
+function LandingPage({ parkData, selectedLocation, setSelectedLocation }) {
 
     // console.log(parkData)
 
-    const [selectedLocation, setSelectedLocation] = useState(null);
+    // const [selectedLocation, setSelectedLocation] = useState(null);
+
+    console.log(selectedLocation);
 
     const handleMarkerClick = (park) => setSelectedLocation(park);
 
-    const handleParkPageClick = (park) => {
-        console.log('park page click')
-        
-    }
+    const handleParkPageClick = () => {
+        console.log('Go to park page:', selectedLocation.name);
+    };
+    
+    const handleStatePageClick = () => {
+        console.log('See all parks in:', selectedLocation.states);
+    };
+
 
     return (
         <>
@@ -60,9 +66,13 @@ function LandingPage({ parkData }) {
                                 <p>{selectedLocation.description.slice(0,110)}...</p>
                             </div>
                             <div style={{textAlign: 'center'}}>
-                                <Link to="/park">{selectedLocation.fullName}'s Page</Link>
+                                <Link to={`/park/${selectedLocation.fullName}`} onClick={handleParkPageClick}>
+                                    Go to {selectedLocation.fullName}'s Page
+                                </Link>
                                 <br />
-                                <Link to="/state">View All {selectedLocation.states} Parks</Link>
+                                <Link to={`/state/${selectedLocation.states}`} onClick={handleStatePageClick}>
+                                    See All Parks in {selectedLocation.states}
+                                </Link>
                             </div>
                         </Popup>
                     )}
