@@ -1,29 +1,38 @@
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 function ParkPage({parkData, selectedLocation}) {
 
-    console.log(selectedLocation);
+    // console.log(selectedLocation);
 
-    // console.log('parkData on ParkPage', parkData[1]["description"])
+    const [selectedPark, setSelectedPark] = useState([]);
 
-    // const parkInfo = parkData.map((item, index) => {
-    //     return (
-    //         <>
-    //             <h1>{item.fullName}</h1>
-    //         </>
-    //     )
+    let {fullName} = useParams();
+    console.log('fullName, useParams, ParkPage', fullName);
+
+    // NEED TO SET UP PARK ROUTES BY FULLNAME ON BACKEND:
+    // useEffect(() => {
+    //     fetch(`http://localhost:3000/parks/${fullName}`)
+    //         .then((r) => r.json())
+    //         .then((park) => (
+    //             setSelectedPark(park)
+    //         ))
+    //         console.log('selectedPark on parkpage through useeffect', selectedPark)
     // })
 
     return ( 
         <>
-        <h1>Park Page</h1>
-            {/* <div style={{textAlign: "center"}} >
-                <h2 style={{border: "solid black 2px"}}>MAINE</h2>
+        {/* <h1>Park Page</h1> */}
+            <div style={{textAlign: "center"}} >
+                {/* <h2 style={{border: "solid black 2px"}}>{states}</h2> */}
                 <div className="parkContainer">
+                    <h3>{fullName}</h3>
                     <div className="parkImgContainer">
-                        <img src="https://media.istockphoto.com/id/1322937048/photo/cadillac-mountain.jpg?b=1&s=170667a&w=0&k=20&c=4iwvk2YIzRIN90bBazqF6pm5x5YSn4YFOaHBLGhys3g="  alt="park-name"/>
+                        {/* <img src={images[1]}  alt={fullName}/> */}
                     </div>
-                    <h4>Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage. At 4 million visits a year, it's one of the top 10 most-visited national parks in the United States. Visitors enjoy 27 miles of historic motor roads, 158 miles of hiking trails, and 45 miles of carriage roads.</h4>
+                    {/* <h4>{description}</h4> */}
                 </div>
-            </div> */}
+            </div>
         </>
      );
 }
