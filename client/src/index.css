@@ -173,3 +173,15 @@ hr {
 
 /* -------------------- TOP RATED PAGE ------------------- */
 
+
+/* -------------------- FOOTER ------------------- */
+
+#footer-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+#footer-links {
+  display: flex;
+  justify-content: center;
+}
