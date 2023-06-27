@@ -1,24 +1,14 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+// import { useParams } from "react-router-dom";
+// import { useEffect, useState } from "react";
 
-function ParkPage({parkData, selectedLocation}) {
+function ParkPage({selectedLocation}) {
 
-    // console.log(selectedLocation);
+    console.log('parkPage- selectedLocation', selectedLocation);
 
-    const [selectedPark, setSelectedPark] = useState([]);
+    // const [selectedPark, setSelectedPark] = useState([]);
 
-    let {fullName} = useParams();
-    console.log('fullName, useParams, ParkPage', fullName);
-
-    // NEED TO SET UP PARK ROUTES BY FULLNAME ON BACKEND:
-    // useEffect(() => {
-    //     fetch(`http://localhost:3000/parks/${fullName}`)
-    //         .then((r) => r.json())
-    //         .then((park) => (
-    //             setSelectedPark(park)
-    //         ))
-    //         console.log('selectedPark on parkpage through useeffect', selectedPark)
-    // })
+    // let {parkCode} = useParams();
+    // console.log('parkData on ParkPage', parkData);
 
     return ( 
         <>
@@ -26,7 +16,7 @@ function ParkPage({parkData, selectedLocation}) {
             <div style={{textAlign: "center"}} >
                 {/* <h2 style={{border: "solid black 2px"}}>{states}</h2> */}
                 <div className="parkContainer">
-                    <h3>{fullName}</h3>
+                    {/* <h3>{fullName}</h3> */}
                     <div className="parkImgContainer">
                         {/* <img src={images[1]}  alt={fullName}/> */}
                     </div>

@@ -9,17 +9,17 @@ function LandingPage({ parkData, selectedLocation, setSelectedLocation }) {
 
     // const [selectedLocation, setSelectedLocation] = useState(null);
 
-    console.log(selectedLocation);
+    // console.log(selectedLocation);
 
     const handleMarkerClick = (park) => setSelectedLocation(park);
 
-    const handleParkPageClick = () => {
-        console.log('Go to park page:', selectedLocation.name);
-    };
+    // const handleParkPageClick = () => {
+    //     console.log('Go to park page:', selectedLocation.name);
+    // };
     
-    const handleStatePageClick = () => {
-        console.log('See all parks in:', selectedLocation.states);
-    };
+    // const handleStatePageClick = () => {
+    //     console.log('See all parks in:', selectedLocation.states);
+    // };
 
 
     return (
@@ -52,7 +52,8 @@ function LandingPage({ parkData, selectedLocation, setSelectedLocation }) {
                         <Popup
                             latitude={selectedLocation.latitude}
                             longitude={selectedLocation.longitude}
-                            onClose={() => setSelectedLocation(null)}
+                            // THIS IS WHAT WAS CAUSING ISSUE OF SETTING SELECTEDLOCATION STATE TO NULL:
+                            onClose={() => console.log('cleared')}
                             closeOnClick={false}
                         >
                             <div style={{textAlign: 'center'}}>
@@ -66,16 +67,16 @@ function LandingPage({ parkData, selectedLocation, setSelectedLocation }) {
                                 <p>{selectedLocation.description.slice(0,110)}...</p>
                             </div>
                             <div style={{textAlign: 'center'}}>
-                                <Link to={`/park/${selectedLocation.fullName}`} onClick={handleParkPageClick}>
+                                <Link to={`/park/${selectedLocation.parkCode}`}>
                                     Go to {selectedLocation.fullName}'s Page
                                 </Link>
                                 <br />
-                                <Link to={`/state/${selectedLocation.states}`} onClick={handleStatePageClick}>
+                                <Link to={`/state/${selectedLocation.states}`}>
                                     See All Parks in {selectedLocation.states}
                                 </Link>
                             </div>
                         </Popup>
-                    )}
+                   )} 
                 </Map>
             </div>
         </>
