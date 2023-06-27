@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import park_prowler_pup_R from '../media/park_prowler_pup_R.jpg';
 
 function Footer() {
     return ( 
         <div id='footer-container'>
             <Link>
-                <img src='' alt=''/>
+                <img id='footer-icon' src={park_prowler_pup_R} alt='park prowler pup wearing hat'/>
             </Link>
             <div id='footer-links'>
                 <p>something</p>
