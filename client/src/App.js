@@ -12,6 +12,7 @@ import TopRated from "./components/TopRated";
 import StatePage from "./components/StatePage";
 import ParkPage from "./components/ParkPage";
 import Dashboard from "./components/Dashboard";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
