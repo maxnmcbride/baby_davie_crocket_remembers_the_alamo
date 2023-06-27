@@ -181,6 +181,10 @@ hr {
   grid-template-columns: 1fr 3fr 1fr;
 }
 
+#footer-icon {
+  max-width: 75px;
+}
+
 #footer-links {
   display: flex;
   justify-content: center;
