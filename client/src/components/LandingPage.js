@@ -1,12 +1,26 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Map, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-function LandingPage({ parkData }) {
+function LandingPage({ parkData, selectedLocation, setSelectedLocation }) {
 
-    const [selectedLocation, setSelectedLocation] = useState(null);
+    // console.log(parkData)
+
+    // const [selectedLocation, setSelectedLocation] = useState(null);
+
+    // console.log(selectedLocation);
 
     const handleMarkerClick = (park) => setSelectedLocation(park);
+
+    // const handleParkPageClick = () => {
+    //     console.log('Go to park page:', selectedLocation.name);
+    // };
+    
+    // const handleStatePageClick = () => {
+    //     console.log('See all parks in:', selectedLocation.states);
+    // };
+
 
     return (
         <>
@@ -38,18 +52,31 @@ function LandingPage({ parkData }) {
                         <Popup
                             latitude={selectedLocation.latitude}
                             longitude={selectedLocation.longitude}
-                            onClose={() => setSelectedLocation(null)}
+                            // THIS IS WHAT WAS CAUSING ISSUE OF SETTING SELECTEDLOCATION STATE TO NULL:
+                            onClose={() => console.log('cleared')}
                             closeOnClick={false}
                         >
-                            <div>
-                                <img src={selectedLocation.images[0].url}
+                            <div style={{textAlign: 'center'}}>
+                                <img 
+                                    src={selectedLocation.images[0].url}
                                     width= '200px'
-                                    height= 'auto'/>
+                                    height= 'auto'
+                                    alt={selectedLocation.fullName}
+                                />
                                 <h3>{selectedLocation.fullName}</h3>
-                                <p>{selectedLocation.description}</p>
+                                <p>{selectedLocation.description.slice(0,110)}...</p>
+                            </div>
+                            <div style={{textAlign: 'center'}}>
+                                <Link to={`/park/${selectedLocation.parkCode}`}>
+                                    Go to {selectedLocation.fullName}'s Page
+                                </Link>
+                                <br />
+                                <Link to={`/state/${selectedLocation.states}`}>
+                                    See All Parks in {selectedLocation.states}
+                                </Link>
                             </div>
                         </Popup>
-                    )}
+                   )} 
                 </Map>
             </div>
         </>

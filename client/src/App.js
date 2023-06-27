@@ -17,6 +17,8 @@ function App() {
 
   const [data, setData] = useState([])
 
+  const [selectedLocation, setSelectedLocation] = useState('');
+
   useEffect(() => {
     // Query adjustment for limits is done on the back end
     fetch('http://localhost:3000/parks')
@@ -28,13 +30,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Nav />}>
-          <Route index element={<LandingPage parkData={data}/>} />
+          <Route index element={<LandingPage parkData={data} selectedLocation={selectedLocation} setSelectedLocation={setSelectedLocation} />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="about" element={<About />} />
           <Route path="login" element={<Login />} />
-          <Route path="state" element={<StatePage />} />
-          <Route path="park" element={<ParkPage parkData={data} />}  />
+          <Route path="state/:states" element={<StatePage parkData={data} selectedLocation={selectedLocation} />}/>
+          <Route path="state" element={<StatePage parkData={data} selectedLocation={selectedLocation} />} />
+          <Route path="park/:parkCode" element={<ParkPage selectedLocation={selectedLocation}  />} />
+          {/* <Route path="park" element={<ParkPage selectedLocation={selectedLocation} />}  /> */}
           <Route path="top-rated" element={<TopRated />} />
           <Route path="surprise" element={<SurpriseMe />} />
           <Route path="*" element={<NoPage />} />
